@@ -17,13 +17,14 @@
         width: calc(100% - 250px);
         background: #fff8f0;
       }
+    
       .gallery-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
         align-items: stretch;
       }
-
+    
       .gallery-item {
         display: flex;
         flex-direction: column;
@@ -34,14 +35,14 @@
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        min-height: 520px; /* Forzar altura uniforme */
+        min-height: 520px; /* altura uniforme */
       }
-
+    
       .gallery-item:hover {
         transform: translateY(-8px);
         box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
       }
-
+    
       .gallery-item img {
         width: 100%;
         height: 180px;
@@ -50,7 +51,7 @@
         border-radius: 12px;
         margin-bottom: 15px;
       }
-
+    
       .gallery-item h3 {
         font-family: "Lora", serif;
         font-size: 1.4rem;
@@ -58,72 +59,118 @@
         margin-bottom: 10px;
         text-align: center;
       }
-
+    
       .gallery-item p {
         font-family: "Open Sans", sans-serif;
         font-size: 1rem;
         color: #444;
         text-align: justify;
         margin-bottom: 15px;
-        line-height: 1.4; /* ✅ Ajusta esto para reducir el espacio entre líneas */
+        line-height: 1.4; /* reduce espacio entre líneas */
       }
-
+    
       .gallery-item hr {
         border: none;
         border-top: 1px solid #ccc;
-        margin: 20px 0; /* ✅ Espacio visual entre Español y Kichwa */
+        margin: 20px 0; /* espacio entre Español y Kichwa */
       }
-
+    
       .gallery-item h3 + p + h3 {
-        margin-top: 20px; /* Ajusta el valor según lo que necesites */
+        margin-top: 20px;
       }
-
+    
+      /* Responsive para pantallas pequeñas */
       @media (max-width: 768px) {
+        body, html {
+          overflow-x: hidden; /* evita scroll horizontal */
+          max-width: 100vw;
+        }
+    
         main {
           margin-left: 0;
           width: 100%;
-          padding: 15px;
+          padding: 10px 10px 20px 10px;
+          background: #fff8f0;
         }
-
-        header {
-          padding: 50px 15px 25px;
-          font-size: 1.8rem;
+    
+        .gallery-grid {
+          grid-template-columns: 1fr; /* 1 columna para evitar overflow */
+          gap: 20px;
+          padding: 0 10px;
         }
-      }
-
-      .menu-toggle {
-        display: none;
-        font-size: 2rem;
-        padding: 15px;
-        cursor: pointer;
-        background: #e19b36;
-        color: white;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        z-index: 1000;
-        border-radius: 8px;
-      }
-
-      @media (max-width: 768px) {
+    
+        .gallery-item {
+          min-height: auto; /* altura automática para móviles */
+        }
+    
+        .sidebar {
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          transform: translateX(-100%);
+          top: 0;
+          left: 0;
+          z-index: 1000;
+        }
+    
+        .sidebar.active {
+          transform: translateX(0);
+        }
+    
+        .sidebar h2 {
+          font-size: 1.2em;
+          padding: 8px 12px;
+          letter-spacing: 0.8px;
+        }
+    
+        main,
+        footer {
+          margin-left: 0;
+          width: 100%;
+        }
+    
         .menu-toggle {
           display: block;
-        }
-      
-        .sidebar {
           position: fixed;
-          left: -100%;
-          top: 0;
-          width: 250px;
-          height: 100%;
-          background: #fff;
-          transition: left 0.3s ease;
-          z-index: 999;
-          box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+          top: 10px;
+          left: 10px;
+          z-index: 1100;
         }
-      
-        .sidebar.active {
-          left: 0;
+    
+        .sidebar.active + main {
+          pointer-events: none; /* evita clics mientras sidebar abierto */
+          opacity: 0.3;
+        }
+    
+        section {
+          flex-direction: column;
+          max-width: 100%;
+          padding: 20px;
+          margin: 20px 10px;
+        }
+    
+        section img {
+          width: 100%;
+          height: auto;
+          margin-bottom: 20px;
+        }
+    
+        section .text-content {
+          min-height: auto;
+          justify-content: flex-start;
+        }
+    
+        header {
+          padding: 60px 10px;
+          background-image: linear-gradient(135deg, #ffcf40, #003087, #ce1126);
+        }
+    
+        header h1 {
+          font-size: 2em;
+        }
+    
+        header::before {
+          display: none;
         }
       }
     </style>
