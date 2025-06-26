@@ -11,10 +11,12 @@
       rel="stylesheet"
     />
     <style>
-      * {
-        box-sizing: border-box;
+      main {
+        margin-left: 250px;
+        padding: 20px;
+        width: calc(100% - 250px);
+        background: #fff8f0;
       }
-
       .gallery-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -32,7 +34,7 @@
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        min-height: 520px;
+        min-height: 520px; /* Forzar altura uniforme */
       }
 
       .gallery-item:hover {
@@ -63,17 +65,17 @@
         color: #444;
         text-align: justify;
         margin-bottom: 15px;
-        line-height: 1.4;
+        line-height: 1.4; /* ✅ Ajusta esto para reducir el espacio entre líneas */
       }
 
       .gallery-item hr {
         border: none;
         border-top: 1px solid #ccc;
-        margin: 20px 0; 
+        margin: 20px 0; /* ✅ Espacio visual entre Español y Kichwa */
       }
 
       .gallery-item h3 + p + h3 {
-        margin-top: 20px;
+        margin-top: 20px; /* Ajusta el valor según lo que necesites */
       }
     </style>
   </head>
