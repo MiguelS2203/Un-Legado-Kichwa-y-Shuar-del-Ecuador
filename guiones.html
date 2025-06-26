@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galería - Un Legado</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Roboto:wght@400;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        align-items: stretch;
+      }
+
+      .gallery-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background: white;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        min-height: 520px; /* Forzar altura uniforme */
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border: 3px solid #e19b36;
+        border-radius: 12px;
+        margin-bottom: 15px;
+      }
+
+      .gallery-item h3 {
+        font-family: "Lora", serif;
+        font-size: 1.4rem;
+        color: #2e1f0f;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .gallery-item p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        color: #444;
+        text-align: justify;
+        margin-bottom: 15px;
+        line-height: 1.4; /* ✅ Ajusta esto para reducir el espacio entre líneas */
+      }
+
+      .gallery-item hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 20px 0; /* ✅ Espacio visual entre Español y Kichwa */
+      }
+
+      .gallery-item h3 + p + h3 {
+        margin-top: 20px; /* Ajusta el valor según lo que necesites */
+      }
+
+      @media (max-width: 1024px) {
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        main {
+          margin-left: 0;
+          width: 100%;
+        }
+
+        nav.sidebar {
+          display: none;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="sidebar">
+        <h2>Un Legado Kichwa y Shuar del Ecuador</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="kichwa.html">Kichwa</a></li>
+          <li><a href="shuar.html">Shuar</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="guiones.html" class="active">Guiones</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <header>
+          <h1>Galería Cultural</h1>
+        </header>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="imagenes/mujeres_kichwa.jpg" alt="Mujeres kichwa" />
+            <h3>Español:</h3>
+            <p>
+              La cultura Otavalo pertenece a la nacionalidad Kichwa, ubicados al
+              norte del Ecuador en la provincia de Imbabura, se caracterizan por
+              su vestuario colorido en las mujeres, el anaco, el fondo, la
+              blusa, el sombrero, la fachalina, los collares, aretes y
+              alpargatas son características de su identidad cultural.
+            </p>
+            <h3>Kichwa:</h3>
+            <p>
+              Otavalo llaktakuna Kichwa nacionmanmi kan. Ecuador mama
+              llaktapika, Imbabura provinciapimi, sinchikta ñawpa llaqtapimi
+              kawsanku. Warmikuna k'achalla p'unchaykunawan ñawpakunami
+              rikurinkuna: anaku, siki p'acha, blusa, sumiru, fachalina,
+              kunkapak watanakuna, rinriwatakuna, chukuta rikuna
+              alpargatakunammi Kichwa shimikuna ruraykuna kawsayta rikuchin.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/mujeres_kichwa2.jpg" alt="Ritual Otavalo" />
+            <h3>Español:</h3>
+            <p>
+              Otavalo tiene uno de los rituales tradicionales en la utilización
+              del cedazo como que lo utilizan para colar los alimentos como por
+              ejemplo la harina de maíz, este cedazo es utilizado como un
+              símbolo cultural, un símbolo de resistencia y memoria histórica de
+              la cultura Otavalo que se utiliza también como parte del vestuario
+              o como decoraciones.
+            </p>
+            <h3>Kichwa:</h3>
+            <p>
+              Otavalo llaqtapi chay ñawpa riksishka rituallukuna kashkan, cedazo
+              nira ñawinchik mikuykunata churana, kay cedazo chaylla saramillu
+              rikuchinata churan, kaymi Otavalo llaqtakunapak kawsaypimi
+              riksichina, kaymi shinallatak kawsay sumak yuyayta rikuchinata.
+              Cedazokuna chaymi lluksimanta ruranakunata, rimaykunata, wataykuna
+              lluksinakunata chayllatak ruranakunata shamun.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/mujeres_kichwa3.jpg" alt="Baile Sanjuanito" />
+            <h3>Español:</h3>
+            <p>
+              El Sanjuanito es uno de los ritmos tradicionales de la cultura
+              Otavalo, con la cual hombres y mujeres danzan en parejas y en
+              conjunto para representar la dualidad de la vida, las mujeres con
+              trajes coloridos y los hombres con sus ponchos azules y sus
+              sombreros, realizan una danza ritual que generalmente se la baila
+              en círculo para demostrar su trabajo en comunidad.
+            </p>
+            <h3>Kichwa:</h3>
+            <p>
+              San Juanito ñawpa takikuna Otavalo runakunapak kawsaymanta, chay
+              takipi warmikuna wawanakuna shinallatak kari runakuna
+              tinkunakunata tusukunchik. Kay tusuy kawsaypika iskaykunata
+              rikuchin, warmikuna lluksimanta llikllakunawan sumak punchukunawan
+              churanakun, karikuna azul punchuwan ñawpak hatukunawan
+              tusukunchik. Kay tusuy riksishka rituallami, shuk killkana
+              tusuykunata ruraykunata, llaktamanta ruranakuyta rikuchin.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/mujeres_kichwa4.jpg" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              Una de las fiestas y tradiciones importantes de la cultura Otavalo
+              es el Pawcar Raymi, en esta fiesta se honra el florecimiento de
+              las plantas, la fertilidad de la tierra y el inicio del ciclo de
+              la agricultura, las mujeres con su vestimenta colorida forman un
+              círculo con arcos de flores en el cual se plasma la unión de su
+              comunidad.
+            </p>
+            <h3>Kichwa:</h3>
+            <p>
+              Shuk hatun raymi shinallatak Otavalo runakunap tradishunkunamanta
+              Pawkar Raymi kan. Kay raymipi alli sacha saksayta, allpamama
+              wiñanakuyta, chakra kawsaypa kallarinata yupaychachun. Warmikuna
+              sumak lluksimanta punchukunawan tullpuk arkunawan shuk killkapi
+              tinkunakun, chay killkapi llaktakunapak shinayuk kawsay rikurimun.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/pawkar.png" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              El Pawcar Raymi es una de las fiestas más importantes de los
+              pueblos y nacionalidades kichwa, es una fiesta en la que se
+              representa a la fertilidad de la tierra y las mujeres danzan para
+              dar gracias a la tierra por esa fertilidad, al ritmo de San
+              Juanito sus movimientos son simétricos y sincrónicos que llevan a
+              contemplar la riqueza de los kichwas.
+            </p>
+            <h3>Kichwa:</h3>
+            <p>
+              Pawkar Raymi kikin hatun raymikuna shukmi, runakuna ñawpakuna
+              Kichwa llaktakunap ñawpa raymimanta. Kay raymipi allpamama
+              wiñanakuy rikuchin, warmikuna tusukunchik yupaychani allpamamaman
+              wiñanakuymanta. San Juanito takipi tusuykuna tinkuyukmi, kikinkuna
+              shinashina purinkapak, chaypi Kichwakunap llukshimanta kallariy
+              rikurimun.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/cayambe.jfif" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              Cayambe es una cultura kichwa que se caracteriza por su vestimenta
+              de colores sobre todo en las mujeres, con sus faldas plisadas y de
+              colores, sus blusas bordadas, su sombrero de paño y los hombres
+              con su pantalón blanco, poncho y sombrero tienen una de las
+              costumbres y tradiciones de las fiestas de San Pedro de Cayambe
+              que se celebra en junio en honor al inicio del solsticio de
+              verano.
+            </p>
+            <h3>Kichwa:</h3>
+            <p>
+              Cayambi Kichwa llaktamanta kawsaymi, warmikuna lliklla tullpuk
+              punchukunawan, bordaduk blusakunawan, makiwatakunawan sumak
+              rikurinkuna. Karikuna yurak pantalonwan, punchuwan, sombrerowan
+              rikurinkuna. Kaykunami San Pedro raymimanta shinayuk shimikunata
+              churin, chay raymi juni killapi raykun, inti wataypa
+              kallarinamanta yupaychachik.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/sanpedro.JPG" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              Las fiestas de San Pedro en Cayambe se caracterizan porque las
+              mujeres utilizan sus vestimentas de colores y sus faldas anchas
+              que son los principales atractivos de esta tradición, en la cual
+              las mujeres bailan en unidad para representar la fuerza de su
+              comunidad y cultura y ritmo de coplas cantan y bailan en honor al
+              inicio del verano.
+            </p>
+            <h3>Kichwa:</h3>
+            <p>
+              San Pedro raymikuna Cayambipi riksichin warmikuna sumak tullpuk
+              llikllakunawan, hatun pollerakunawan rikurinkapak. Kay
+              punchukunami kay tradishunpa sumak llukshi kan. Kay raymipi
+              warmikuna tusukunchik shinayuk killkapi, llaktakunap kallarikuyta,
+              kawsayta rikuchinankapak. Coplata takikushpa, tusukushpa inti
+              wataypa kallarinamanta yupaychachunkuna.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/culturacayambe.png" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              La cultura de Cayambe tiene una de las vestimentas más coloridas,
+              sobre todo para las mujeres, pues sus colores resaltan su belleza
+              y los rituales en los cuales danzan con carisma e identidad, sus
+              sombreros son de paño y de diferentes colores y sus blusas tienen
+              unos bordados con finos detalles que complementan su riqueza
+              cultural.
+            </p>
+            <h3>Kichwa:</h3>
+            <p>
+              Cayambi kawsaymi warmikunapak lluksimanta tullpuk punchukunata
+              charin. Chay llikllakunap tullpuykuna warmikuna sumak alli
+              kawsayta rikuchin, chayllatak rituallapika tusukushpa kawsayta,
+              runapak shinayuk kawsayta willakun. Ñawpak makiwatakunaka lliklla
+              watakunawan churan, michik llikllakunawan churan, ñawichinkuna
+              sumak rikurimun. Blusakunaka ñawpak lluksi millkakunawan
+              bordadukmi, chaymi kawsaykuna llukshimanta alli rikuchin.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/cayambecultura.png" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              Cerca de Cayambe hay otra cultura Kichwa que es de Zuleta en la
+              cual sus faldas son plisadas y de color negro, sus sombreros
+              coloridos y de paño, sus blusas que utilizan en acontecimientos
+              importantes como las fiestas de San Juan y el Corpus Christi, que
+              es una fusión de los rituales de creencias cristianas con las
+              ancestrales.
+            </p>
+            <h3>Kichwa:</h3>
+            <p>
+              Cayambi llaktaman chaymanta chaypi ñukanchik Kichwa llakta Zuleta
+              kan. Chaypi warmikuna yurak llikllawan mana tullpuk pollerata
+              churakunkapak, ñawi llimpiyuk chumpikuna, makiwata michik
+              llikllawan churan. Blusakunaka chayka San Juan raymipi, Corpus
+              Christi raymipi apanakun, chay raymi tukuypa riksishka: cristianuk
+              yuyaykuna shinallatak ñawpa runakunap rituallakunamanta
+              tinkunakunamanta shuk kawsay rikuchin.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/ayahuma.jfif" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              El Aya Huma es uno de los personajes principales en las
+              celebraciones ancestrales de los pueblos y nacionalidades sobre
+              todo de la cultura de Cayambe, es el personaje más representativo
+              en las celebraciones del Inty Raymi, pues es una de las figuras
+              espirituales donde se plasma la dualidad y la sabiduría de los
+              pueblos andinos.
+            </p>
+            <h3>Kichwa:</h3>
+            <p>
+              Aya Huma shukmi hatun rikuspak runami ñawpa raymikunapi,
+              runakunapash, kichwa llaktakunapash, llapanmanta, Cayambi kawsaypi
+              rikcharin. Kay runa Inti Raymi raymipi ñawpakmi rikurimun,
+              shinallatak kawsaypi yuyayniyoq ima runakunap kaylla, iskaykuna
+              kawsayta, yachayta rikuchin. Kaymi shuk espiritwalmi ruraykuna
+              tukuy andinokuna kawsaymanta.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/diablohuma.jpg" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              El Diablo Huma siempre está acompañado de su warmi, pues entre
+              ambos representan la dualidad de la vida, sobre todo en las
+              fiestas ancestrales, el Diablo Huma se caracteriza porque usa una
+              máscara doble cara y de diversos colores, que se presenta como la
+              conexión entre el cosmos y la tierra.
+            </p>
+            <h3>Kichwa:</h3>
+            <p>
+              Diablo Huma ñawpakpi warmiwan takarishka rikurimun, chay
+              tinkuykunaka kawsaypa iskaykuna rikuchin. Ñawpa raymikunapi kay
+              runa rikcharin. Diablo Huma sutinmi ñawpak laya maskarawan
+              rikurinkapak, iskay uya churan, lliklla llimpiyuk kunawan. Kaymi
+              kay runa kawsayta allpamamawan, hanan pachawan tinkuykunata
+              rikuchin.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/diablohumaa.jpg" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              El Diablo Huma es el personaje principal en la Fiesta del Sol
+              (Inty Raymi) pues es quien ahuyenta todo tipo de energía negativa,
+              y por ende se convierte en armonía para la conexión con la tierra,
+              el sol y la luna, pero sobre todo es una dualidad, es decir: el
+              día y la noche, el bien y el mal, el pasado y el futuro, por estos
+              aspectos es el personaje que jamás va a faltar en las fiestas
+              andinas.
+            </p>
+            <h3>Kichwa:</h3>
+            <p>
+              Diablo Huma shukmi hatun runa Inti Raymi raymipi, chaymi tukuy
+              mana alli yuyaykuna purichishka, chaymi alli kawsayta ruray
+              allpamanta, intiwan, killawan juntakuyta. Ñukanchikmi rikunchik
+              iskaykuna, punchakuna, chaymanta churaykuna, alli mana, ñawpa
+              yachay, kawsaypa. Kay ima rikurimunmi shuk runa mana rikushka
+              kanrayku andin raymikunapi mana shina rikuchina.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/cañaricultura.jfif" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              Otra cultura Kichwa es la cultura del Cañari ubicados en Azuay y
+              Cañar, Cañari tiene como significado que son descendientes de la
+              serpiente y la guacamaya, con un gran legado de costumbres y
+              tradiciones entre la cerámica, los bordados y sus costumbres y
+              tradiciones.
+            </p>
+            <h3>Kichwa:</h3>
+            <p>
+              Otra cultura Kichwa es la cultura del Cañari ubicados en Azuay y
+              Cañar, Cañari tiene como significado que son descendientes de la
+              serpiente y la guacamaya, con un gran legado de costumbres y
+              tradiciones entre la cerámica, los bordados y sus costumbres y
+              tradiciones.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/fiestascañari.jfif" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              Dentro de las fiestas andinas de la cultura Cañari están el Killa
+              Raymi (Fiesta de la Luna) y el Lalay Raymi (Carnaval Cañari),
+              donde utilizan sus mejores vestimentas con trajes coloridos, las
+              mujeres y sus faldas de colores, sus blusas bordadas, diferentes
+              fajas de colores, sus sombreros de paño y de color blanco, sus
+              fachalinas y collares para danzas en sus principales fiestas.
+            </p>
+            <h3>Kichwa:</h3>
+            <p>
+              Cañari kawsaypi ñawpak raymikunapi Killa Raymi (Killa Raymi) Lalay
+              Raymi (Cañari Carnaval) kan. Kay raymikunapi warmikuna sumak
+              tullpuk llikllakunawan, bordaduk blusakunawan, llaktakunap faja
+              llikllakunawan, makiwata yurak, yurak llikllawan churan,
+              fachalina, kallarikuna tusukunchik kay raymikunapi.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/bailedecintas.jfif" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              Los Cañaris realizan el tradicional “Baile de las Cintas” en donde
+              celebran la unión de su comunidad, la fertilidad de la tierra y el
+              inicio de la primavera para sus cosechas, esta costumbre es una de
+              las características de estos pueblos que con el baile demuestran
+              los lazos y la conexión entre su comunidad y entre el hombre y la
+              mujer, fiesta característica donde danzas con sus vestimentas
+              coloridas y demuestran su unión comunitaria.
+            </p>
+            <h3>Kichwa:</h3>
+            <p>
+              Cañarikuna rurankuna shinallatak “Tullpak Tusuy” raymipi, chaypi
+              llaktakunap juntakunata, allpa wiñanakuyta, wachay punchak
+              kallarinata yupaychankun. Kay tradishun shukmi kay runakunapak
+              rikuchina, tusuykunata ruraykunata, llaktakunapak kallarikuyta,
+              warmi karikuna tinkunakunata. Kay raymi shinallatakmi tusukunchik
+              lliklla tullpukkunawan, llaktakunapak juntakunata rikuchinankapak.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/bailecintass.jfif" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              Los Cañaris realizan el tradicional “Baile de las Cintas” en donde
+              celebran la unión de su comunidad, la fertilidad de la tierra y el
+              inicio de la primavera para sus cosechas, esta costumbre es una de
+              las características de estos pueblos que con el baile demuestran
+              los lazos y la conexión entre su comunidad y entre el hombre y la
+              mujer, fiesta característica donde danzas con sus vestimentas
+              coloridas y demuestran su unión comunitaria.
+            </p>
+            <h3>Kichwa:</h3>
+            <p>
+              Cañarikuna rurankuna shinallatak “Tullpak Tusuy” raymipi, chaypi
+              llaktakunap juntakunata, allpa wiñanakuyta, wachay punchak
+              kallarinata yupaychankun. Kay tradishun shukmi kay runakunapak
+              rikuchina, tusuykunata ruraykunata, llaktakunapak kallarikuyta,
+              warmi karikuna tinkunakunata. Kay raymi shinallatakmi tusukunchik
+              lliklla tullpukkunawan, llaktakunapak juntakunata rikuchinankapak
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/shuarcultura.jfif" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              La cultura shuar es originaria de la Amazonía ecuatoriana, que se
+              caracteriza por sus costumbres guerreras y por su lengua ancestral
+              Shuar Chicham, se caracterizan por la caza y la reducción de
+              cabezas, han tenido un gran desarrollo histórico a la resistencia
+              a la dominación de los europeos.
+            </p>
+            <h3>Shuar Chicham:</h3>
+            <p>
+              Shuar nunka Ecuador nunka amazonía wakichar wá. Shuar chicham
+              atsámi, jemej aitkáram, yáankam pujutnum wá. Aents nanká umarammi,
+              tsantsa uwírmammi, iwianmi. European chichá nantar pujutnumu,
+              shuar aents aintstárum nuwámi.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/chonta.jfif" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              La cultura Shuar tiene una de las fiestas tradicionales conocida
+              como la “Chonta” en la cual se agradece por la riqueza de la
+              tierra y la abundancia de la naturaleza, con esta fiesta se marca
+              el inicio del nuevo ciclo de la cultura, es un proceso de
+              preparación de la “Chonta” donde se canta, se elabora la chicha y
+              se hacen plegarias.
+            </p>
+            <h3>Shuar Chicham:</h3>
+            <p>
+              Shuar nunka wá chicham umiki, “Chunta” suritji íwian aentsme.
+              Chunta nanká, Nunkui nunká pujustin, natemamu asamká wá. Chichá
+              arútin, shuar nunkame chicham ijíjtin. Arútin yá, chunta nanká
+              tura, nijíjtin, nijam chicha itíjtin, aujmá nunki iwíjtin.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/shuar.jfif" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              Los Shuar por ser una cultura guerrera han desarrollado diferentes
+              tipos de herramientas para la guerra y la caza, siendo una de las
+              principales armas tradicionales desarrollada es la Lanza de
+              Chonta, otras como las flechas elaboradas con madera, el Tantar
+              que es un escudo de protección.
+            </p>
+            <h3>Shuar Chicham:</h3>
+            <p>
+              Shuar aents jemej aitkáram nunkáme wá, tsentsak ni yáankam
+              pujutnum pujustin, patarátin atsámi. Aents nanká “Chunta tsawá”
+              suritji wá chichá tsentsak iwianmi. Ikiam tsentsak nanká yajáts
+              (flecha) nunka itíjtin, Tantar suritji, chichá nantar uwírmammi
+              tsentsak wá.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/shuarr.jpg" alt="Pawkar Raymi" />
+            <h3>Español:</h3>
+            <p>
+              La cultura Shuar tiene una directa relación con la naturaleza de
+              la selva amazónica, tienen un gran desarrollo en la pesca, la
+              agricultura y la aplicación de la medicina tradicional, es una
+              cultura rica en conocimiento ancestral que es importante seguirlo
+              cultivan para que no se pierda.
+            </p>
+            <h3>Shuar Chicham:</h3>
+            <p>
+              Shuar aents nunkáme tsunki nunká asamká ankanmámi. Yámpet,
+              karmentramu, natuarmá itín pujutnum iwianmi. Shuar nunkáme iwian
+              suritji etserká chicham, nuwámi chichá yáá ajútin, pujusna aintsme
+              nintinmatin.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <p>
+        © 2025 Un Legado Kichwa y Shuar | Inspirado en la riqueza cultural del
+        Ecuador
+      </p>
+    </footer>
+  </body>
+</html>
