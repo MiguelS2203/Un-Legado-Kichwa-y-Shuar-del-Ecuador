@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kichwa - Un Legado</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Roboto:wght@400;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar">
+        <h2>Un Legado Kichwa y Shuar del Ecuador</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="kichwa.html" class="active">Kichwa</a></li>
+          <li><a href="shuar.html">Shuar</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="guiones.html">Guiones</a></li>
+        </ul>
+      </nav>
+      <main>
+        <header>
+          <h1>Kichwa del Ecuador</h1>
+        </header>
+
+        <section class="content-section">
+          <img
+            src="imagenes/historia kichwa.jpg"
+            alt="Historia y Cultura Kichwa"
+          />
+          <div class="text-content">
+            <h2>Historia y Cultura</h2>
+            <p>
+              Los Kichwa habitan principalmente la Sierra y la Amazonía
+              ecuatoriana, y son reconocidos por su profunda conexión con la
+              naturaleza y la preservación de su lengua y tradiciones
+              ancestrales. Su cultura incluye prácticas espirituales, rituales,
+              artesanías y una cosmovisión que integra respeto hacia la tierra y
+              los ciclos naturales.
+            </p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <img
+            src="imagenes/Kichwa baile.jpg"
+            alt="Baile de Bienvenida Kichwa"
+          />
+          <div class="text-content">
+            <h2>Baile de Bienvenida</h2>
+            <p>
+              El baile de bienvenida kichwa es una danza tradicional que se
+              realiza para recibir a invitados y visitantes con respeto y
+              alegría. Generalmente, se acompaña con música de instrumentos
+              típicos como la flauta y el bombo, y los bailarines visten trajes
+              coloridos con elementos que representan la naturaleza y la cultura
+              andina amazónica. Este baile simboliza la hospitalidad, la unión y
+              la armonía con el entorno.
+            </p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <img
+            src="imagenes/kichwa mujer vestimenta.jpg"
+            alt="Vestimenta Tradicional Mujeres Kichwa"
+          />
+          <div class="text-content">
+            <h2>Vestimenta Tradicional Mujeres</h2>
+            <p>
+              Refleja su identidad cultural y conexión con la naturaleza. Suele
+              incluir faldas o enaguas hechas de telas coloridas, blusas
+              bordadas, y adornos con cuentas, plumas y semillas. Además,
+              complementan su atuendo con collares y cintas que simbolizan su
+              pertenencia a la comunidad y su rol dentro de ella. Esta
+              vestimenta es funcional para el clima tropical y es un símbolo de
+              respeto a sus tradiciones ancestrales.
+            </p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <img
+            src="imagenes/baile san juanito.jpg"
+            alt="Baile Tradicional San Juanito"
+          />
+          <div class="text-content">
+            <h2>Baile Tradicional San Juanito</h2>
+            <p>
+              El Sanjuanito es un baile tradicional andino, muy popular en
+              Ecuador, que se caracteriza por su ritmo alegre y movimientos
+              dinámicos. Se baila en pareja durante festividades y
+              celebraciones, especialmente en honor a San Juan, patrono de
+              varias comunidades. Representa la alegría, la unidad y la
+              identidad cultural de los pueblos indígenas y mestizos de la
+              región andina.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p>
+        © 2025 Un Legado Kichwa y Shuar | Inspirado en la riqueza cultural del
+        Ecuador
+      </p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sidebar = document.querySelector(".sidebar");
+        const toggle = document.createElement("div");
+        toggle.className = "menu-toggle";
+        toggle.innerHTML = "☰";
+        toggle.setAttribute("aria-label", "Toggle menu");
+        document.body.prepend(toggle);
+
+        toggle.addEventListener("click", () => {
+          sidebar.classList.toggle("active");
+        });
+
+        const menuLinks = document.querySelectorAll(".sidebar ul li a");
+        menuLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            if (window.innerWidth <= 768) {
+              sidebar.classList.remove("active");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shuar - Un Legado</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Roboto:wght@400;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar">
+        <h2>Un Legado Kichwa y Shuar del Ecuador</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="kichwa.html">Kichwa</a></li>
+          <li><a href="shuar.html" class="active">Shuar</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="guiones.html">Guiones</a></li>
+        </ul>
+      </nav>
+      <main>
+        <header>
+          <h1>Shuar del Ecuador</h1>
+        </header>
+
+        <section class="content-section">
+          <img src="imagenes/shuar selva.jfif" alt="Shuar en la selva" />
+          <div class="text-content">
+            <h2>Historia y Cultura</h2>
+            <p>
+              Los Shuar habitan principalmente en la Amazonía ecuatoriana y son
+              conocidos por su resistencia histórica y su relación simbiótica
+              con la selva. Su cultura incluye el uso de la ayahuasca, rituales
+              espirituales y la elaboración de artesanías únicas.
+            </p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <img src="imagenes/shuar baile.jpg" alt="Baile Shuar" />
+          <div class="text-content">
+            <h2>Baile de Bienvenida</h2>
+            <p>
+              El baile de bienvenida es una manifestación cultural y ceremonial
+              realizada para recibir con respeto, alegría y hospitalidad a
+              visitantes, miembros de la comunidad o autoridades. A través del
+              movimiento, la música y los cantos, expresa gratitud, apertura y
+              unidad. Se realiza al inicio de eventos importantes y puede tener
+              significado espiritual, social o simbólico. Involucra a varios
+              miembros de la comunidad como forma de participación colectiva.
+            </p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <img
+            src="imagenes/shuar hombre vestimenta.jpg"
+            alt="Vestimenta Shuar hombre"
+          />
+          <div class="text-content">
+            <h2>Vestimenta Tradicional - Hombres</h2>
+            <p>
+              El hombre Shuar usa un taparrabos hecho de fibras naturales como
+              la chambira, adornos de semillas, plumas y dientes de animales, y
+              pintura corporal con achiote. Va descalzo y su vestimenta es
+              ligera para facilitar el movimiento en la selva amazónica.
+            </p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <img
+            src="imagenes/shuar mujer vestimenta.jpg"
+            alt="Vestimenta Shuar mujer"
+          />
+          <div class="text-content">
+            <h2>Vestimenta Tradicional - Mujeres</h2>
+            <p>
+              La vestimenta tradicional de las mujeres Shuar está elaborada con
+              fibras naturales como la chambira. Se complementa con adornos de
+              semillas, plumas y pinturas corporales. Refleja su conexión con la
+              naturaleza y su rol dentro de la comunidad, y es usada en
+              ocasiones cotidianas y ceremoniales.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <p>
+        © 2025 Un Legado Kichwa y Shuar | Inspirado en la riqueza cultural del
+        Ecuador
+      </p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sidebar = document.querySelector(".sidebar");
+        const toggle = document.createElement("div");
+        toggle.className = "menu-toggle";
+        toggle.innerHTML = "☰";
+        toggle.setAttribute("aria-label", "Toggle menu");
+        document.body.prepend(toggle);
+
+        toggle.addEventListener("click", () => {
+          sidebar.classList.toggle("active");
+        });
+
+        const menuLinks = document.querySelectorAll(".sidebar ul li a");
+        menuLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            if (window.innerWidth <= 768) {
+              sidebar.classList.remove("active");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

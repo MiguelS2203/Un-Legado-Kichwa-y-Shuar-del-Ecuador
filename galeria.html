@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galería - Un Legado</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Roboto:wght@400;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      main {
+        margin-left: 250px;
+        padding: 20px;
+        width: calc(100% - 250px);
+        background: #fff8f0;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .gallery-item {
+        background: white;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        max-height: 180px;
+        border: 3px solid #e19b36;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 15px;
+      }
+
+      .gallery-item h3 {
+        font-family: "Lora", serif;
+        font-size: 1.4rem;
+        color: #2e1f0f;
+        margin-bottom: 8px;
+      }
+
+      .gallery-item p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1rem;
+        color: #444;
+      }
+
+      @media (max-width: 768px) {
+        main {
+          margin-left: 0;
+          width: 100%;
+          padding: 15px;
+        }
+
+        header {
+          padding: 50px 15px 25px;
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="sidebar">
+        <h2>Un Legado Kichwa y Shuar del Ecuador</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="kichwa.html">Kichwa</a></li>
+          <li><a href="shuar.html">Shuar</a></li>
+          <li><a href="galeria.html" class="active">Galería</a></li>
+          <li><a href="guiones.html">Guiones</a></li>
+        </ul>
+      </nav>
+      <main>
+        <header>
+          <h1>Galería Cultural</h1>
+        </header>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img
+              src="imagenes/amazonia Ecuador.jpg"
+              alt="Paisaje de la Amazonía ecuatoriana"
+            />
+            <h3>Paisaje Amazónico</h3>
+            <p>
+              Un espléndido paisaje que refleja la riqueza natural donde habitan
+              los Shuar y Kichwa.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="imagenes/Ceremonia Kichwa.jpg"
+              alt="Ceremonia tradicional Kichwa"
+            />
+            <h3>Ceremonia Tradicional Kichwa</h3>
+            <p>
+              Rituales ancestrales que mantienen viva la identidad y
+              espiritualidad kichwa.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img src="imagenes/Artesanias Shuar.jpg" alt="Artesanías Shuar" />
+            <h3>Artesanías Shuar</h3>
+            <p>
+              Elaboración de objetos con materiales naturales que representan su
+              cultura y arte.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="imagenes/Baile San Juanito Kichwa.jpg"
+              alt="Baile tradicional San Juanito"
+            />
+            <h3>Baile San Juanito</h3>
+            <p>
+              Expresión de alegría y unidad en las festividades tradicionales
+              andinas.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="imagenes/Vestimenta Kichwa.jpg"
+              alt="Vestimenta tradicional Kichwa"
+            />
+            <h3>Vestimenta Tradicional Kichwa</h3>
+            <p>
+              Colores y diseños que reflejan la identidad cultural y conexión
+              con la naturaleza.
+            </p>
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="imagenes/Sierra Ecuatoriana.jpg"
+              alt="Paisaje de la Sierra ecuatoriana"
+            />
+            <h3>La Sierra Ecuatoriana</h3>
+            <p>
+              Región donde reside gran parte del pueblo Kichwa, con paisajes y
+              culturas únicas.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <p>
+        © 2025 Un Legado Kichwa y Shuar | Inspirado en la riqueza cultural del
+        Ecuador
+      </p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sidebar = document.querySelector(".sidebar");
+        const toggle = document.createElement("div");
+        toggle.className = "menu-toggle";
+        toggle.innerHTML = "☰";
+        toggle.setAttribute("aria-label", "Toggle menu");
+        document.body.prepend(toggle);
+
+        toggle.addEventListener("click", () => {
+          sidebar.classList.toggle("active");
+        });
+
+        const menuLinks = document.querySelectorAll(".sidebar ul li a");
+        menuLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            if (window.innerWidth <= 768) {
+              sidebar.classList.remove("active");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
