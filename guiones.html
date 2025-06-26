@@ -558,5 +558,29 @@
         Ecuador
       </p>
     </footer>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sidebar = document.querySelector(".sidebar");
+        const toggle = document.createElement("div");
+        toggle.className = "menu-toggle";
+        toggle.innerHTML = "☰";
+        toggle.setAttribute("aria-label", "Toggle menu");
+        document.body.prepend(toggle);
+
+        toggle.addEventListener("click", () => {
+          sidebar.classList.toggle("active");
+        });
+
+        const menuLinks = document.querySelectorAll(".sidebar ul li a");
+        menuLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            if (window.innerWidth <= 768) {
+              sidebar.classList.remove("active");
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
